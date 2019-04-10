@@ -55,7 +55,7 @@ def main():
         ret, frame = cap.read()
 
         if ret == True:
-            edges = cv2.Canny(frame,150,300)
+            edges = cv2.Canny(frame,100,200)
             cv2.imshow('frame',edges)
             if cv2.waitKey(wait) & 0xFF == ord('q'):
                 break
