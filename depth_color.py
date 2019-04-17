@@ -94,7 +94,7 @@ def main():
     while(cap1.isOpened()):
         ret1, frame1 = cap1.read()
 
-        if ret1 == True and ret2 == True:
+        if ret1 == True:
             hsv_cones = cv2.cvtColor(frame1, cv2.COLOR_RGB2HSV)
             
             v = hsv_cones[:, :, 2]
@@ -113,6 +113,7 @@ def main():
             break
 
     cap1.release()
+    cv2.destroyAllWindows()
 
     #fifth videos: show capVideo cone detection beside depthVideo edges
     cap1 = cv2.VideoCapture('../capVideo.mp4') #hard-coded input video
