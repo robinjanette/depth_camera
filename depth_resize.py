@@ -6,8 +6,8 @@ def main():
     wait = 20 #speed of video
 
     #first video: color video added to depth video
-    cap1 = cv2.VideoCapture('../colorVideo.mp4') #hard-coded input video
-    cap2 = cv2.VideoCapture('../depthVideo.mp4') #hard-coded input video
+    cap1 = cv2.VideoCapture('./colorVideo.mp4') #hard-coded input video
+    cap2 = cv2.VideoCapture('./depthVideo.mp4') #hard-coded input video
     
     if (cap1.isOpened() == False or cap2.isOpened() == False): 
         print("Unable to read camera feed")
@@ -30,8 +30,8 @@ def main():
     cv2.destroyAllWindows()
 
     #second video: color video added to blurred, cropped, and resized depth video
-    cap1 = cv2.VideoCapture('../colorVideo.mp4') #hard-coded input video
-    cap2 = cv2.VideoCapture('../depthVideo.mp4') #hard-coded input video
+    cap1 = cv2.VideoCapture('./colorVideo.mp4') #hard-coded input video
+    cap2 = cv2.VideoCapture('./depthVideo.mp4') #hard-coded input video
     
     if (cap1.isOpened() == False or cap2.isOpened() == False): 
         print("Unable to read camera feed")
@@ -70,8 +70,8 @@ def main():
     cv2.destroyAllWindows()
     
     #third video: orange detection in color video added to blurred, cropped, and resized depth video
-    cap1 = cv2.VideoCapture('../colorVideo.mp4') #hard-coded input video
-    cap2 = cv2.VideoCapture('../depthVideo.mp4') #hard-coded input video
+    cap1 = cv2.VideoCapture('./colorVideo.mp4') #hard-coded input video
+    cap2 = cv2.VideoCapture('./depthVideo.mp4') #hard-coded input video
     
     if (cap1.isOpened() == False or cap2.isOpened() == False): 
         print("Unable to read camera feed")

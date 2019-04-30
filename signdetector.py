@@ -24,4 +24,4 @@ class SignDetector:
         else:
             shape = "badsign"
             
-        return shape
+        return shape, approx
