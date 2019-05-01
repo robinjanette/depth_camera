@@ -22,6 +22,6 @@ class SignDetector:
             #returns badsign for any other shape
             shape = "square" if ar >= 0.80 and ar <= 1.20 else "badsign"
         else:
-            shape = "badsign"
+            pass
             
         return shape, approx
