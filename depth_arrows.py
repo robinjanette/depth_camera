@@ -157,6 +157,8 @@ def main():
             incorrect.append(confidences[i])
             incorrect_roi.append(i)
 
+    plt.rcParams.update({'font.size': 28})
+
     # confidence - graph results
     # correct direction - blue
     plt.scatter(correct_roi, correct, color="blue", label='Correct Classification')
@@ -167,8 +169,8 @@ def main():
 
     plt.axis('equal')
     plt.ylim(0, 100)
-    plt.xlabel('Region of Interest Frame Number', fontsize=18)
-    plt.ylabel('Classification Confidence (%)', fontsize=16)
+    plt.xlabel('Region of Interest Frame Number')
+    plt.ylabel('Classification Confidence (%)')
     plt.legend()
     plt.title('NN Classification Confidence per ROI Frame')
     plt.show()
@@ -186,8 +188,8 @@ def main():
 
     # plt.axis('equal')
     # plt.ylim(0, 100)
-    plt.xlabel('Region of Interest Frame Number', fontsize=18)
-    plt.ylabel('Classification Time (ms)', fontsize=16)
+    plt.xlabel('Region of Interest Frame Number')
+    plt.ylabel('Classification Time (ms)')
     plt.title('NN Classification Time per ROI Frame')
     plt.show()
     
